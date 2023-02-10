@@ -47,7 +47,7 @@ jobs:
         uses: azure/powershell@v1
         with:
           inlineScript: |
-            Import-Module Pester -Force -SkipPublisherCheck
+            Import-Module Pester -Force
             $configuration = [PesterConfiguration]::Default
             $configuration.TestResult.Enabled = $true
             $configuration.Output.Verbosity = 'Detailed'
