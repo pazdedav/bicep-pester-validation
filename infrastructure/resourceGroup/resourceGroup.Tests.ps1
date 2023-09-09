@@ -21,7 +21,7 @@ param (
 )
 
 BeforeAll {
-    Import-Module Az.InfrastructureTesting
+    Import-Module BenchPress.Azure -Force
 
     $Script:noRgName = 'notestrg'
 

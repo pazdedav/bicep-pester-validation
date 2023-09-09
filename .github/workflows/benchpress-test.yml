@@ -51,9 +51,8 @@ jobs:
           inlineScript: |
             Set-PSRepository psgallery -InstallationPolicy trusted
             Install-Module -Name Pester -RequiredVersion 5.5.0 -Confirm:$false -Force -SkipPublisherCheck
-            Install-Module -Name Az.InfrastructureTesting -RequiredVersion 0.1 -Confirm:$false -Force -SkipPublisherCheck
+            Install-Module -Name BenchPress.Azure -RequiredVersion 0.1 -Confirm:$false -Force -SkipPublisherCheck
             Import-Module Pester -Force
-            Import-Module Az.InfrastructureTesting -Force
             $configuration = [PesterConfiguration]::Default
             $configuration.TestResult.Enabled = $true
             $configuration.Output.Verbosity = 'Detailed'
